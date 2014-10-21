@@ -10,10 +10,14 @@
 	
 }
 
-#menu{
-	
+#menu a{
+	background: #23868c;
+	list-style: none;
 }
 
+
 #rodape{
-	
+	background: grey;
+	text-align: right;
+	clear: both;
 }
