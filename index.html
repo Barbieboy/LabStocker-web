@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>LabStocker</title>
-		<style type="text/css" href="estilo.css"></style>
+		<meta charset= "UTF-8"/>
+		<title> LabStocker</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 	</head>
 	<body>
-		<div id="home">
-			<img src="assets/img/labstockerlogo.png" id="logo">
-			<p>LabStocker</p>
+		<div class="cabeca"><img src="img/labstockerlogo.png" width= "400" alt="LabStocker" /></div>	
+		<div class="acesso">
+			<form id="acesso">
+				<h2><center>Acesso</center></h2>
+					<p>Usuário</p>
+						<input type="text" name="usuario"></br>
+					<p>Senha</p>
+						<input type="password" name="senha"></br>
+						<input type="submit" name="entrar">
+			</form>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="sobre.html">Sobre</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contato.html">Contato</a></li>
+				<li><a href="suporte.html">Suporte</a></li>
+			</ul>	
+		</div>
+
+	
+		<div class="rodape">
+			<p>LabStocker Inc.©</p>	
+			
+		</div>
+	
 		
-
-		<h2 id="acesso">Acesso</h2>
-		<form>
-			<p>Usuário</p>
-			<input type="text" name="usuario"></br>
-			<p>Senha</p>
-			<input type="password" name="senha"></br>
-			<input type="submit" name="enviar">
-		</form>
-
-		<ul id="menu">
-			<li><a href="sobre.html">Sobre</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="contato.html">Contato</a></li>
-			<li><a href="suporte.html">Suporte</a></li>
-		</ul>
-		</div>
-
-		<div id="rodape">
-			<p><a href="termos.html"></a> Termos</p>
-			<p>LabStocker Inc.©</p>
-		</div>
 	</body>
 </html>
