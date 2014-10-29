@@ -25,7 +25,7 @@ body {
 .navbar-fixed-top {
   border: 0;
   background-color: #23868C;
-  
+
 }
 
 
@@ -41,16 +41,15 @@ body {
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
+    top: 50px;
     bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: rgba(186,217,205,0.5);
-    border-right: 1px solid #eee;
+    background-color: rgba(186, 217, 205, 0.5);
+
   }
 }
 
@@ -62,8 +61,14 @@ body {
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
+  padding-left: 30px;
+}
+
+.nav-sidebar > li > ul > li > a {
+  padding-right: 20px;
   padding-left: 20px;
 }
+
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {

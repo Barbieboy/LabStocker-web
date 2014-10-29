@@ -7,9 +7,9 @@ body{
    margin-top: 20px;
    margin-left: auto;
    margin-right: auto;
- 
+
    width:958px; /* largura */
-   height:xx; /* altura */	
+   height:xx; /* altura */
 }
 
 p{
@@ -53,7 +53,7 @@ a{
    font-family: sans-serif;
    font-size: 15pt;
    border-bottom: 1px solid #ccc;
-   display: inline;  
+   display: inline;
 }
 
 .menu ul li{
@@ -69,14 +69,14 @@ a{
    top: 0;
    display: none;
    font-size: 10pt;
-   
+
 }
 
 .menu ul li a{
    display: block;
    text-decoration: none;
    color: white;
-   background: #23868c; 
+   background: #23868c;
    padding: 5px;
    border: 1px solid #ccc;
    border-bottom: 0;
@@ -87,18 +87,18 @@ a{
 
 .menu li:hover ul, .menu li ul li:hover ul {
    display: block;
-   
+
 }
 
 .menu li:hover ul ul {
    display: none;
-   
+
 }
 
 .menu li li ul a:hover {
-	
+
    background-color: #0B4C5F;
-   
+
 }
 
 .menu a:hover{
@@ -110,8 +110,8 @@ div{
    border: 1px bold;
 }
 div.cabecalho{
-    position: static; 
-            
+    position: static;
+
 }
 div.menu{
    float: left;
@@ -120,8 +120,8 @@ div.menu{
    height: 32px;
    font-family:  Montserrat,sans-serif;
    margin-top: 5px;
-   
-            
+
+
 }
 
 div.acesso{
@@ -129,14 +129,14 @@ div.acesso{
    font-size:16px;
    line-height:200%;
    text-align:justify;
-   position: right;     
+   position: right;
    left:10px;
-   top:10px;   
+   top:10px;
    width:300px;
    height:300px;
    border:solid rgb(100,100,100) 3px;
-   border-radius:10px;  
-   padding:0px 15px 0px 15px; 
+   border-radius:10px;
+   padding:0px 15px 0px 15px;
    color: #000000;
    float: right;
 }
@@ -169,5 +169,3 @@ li:hover .sub2{
    margin-top: 0;
 
 }
-
-
