@@ -76,6 +76,13 @@ body {
   background-color: #5ABB97;
 }
 
+.nav-sidebar-sub > .active > a,
+.nav-sidebar-sub > .active > a:hover,
+.nav-sidebar-sub > .active > a:focus {
+  color: #fff;
+  background-color: #BAD9CD;
+}
+
 
 
 /*
