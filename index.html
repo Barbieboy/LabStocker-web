@@ -1,1 +1,75 @@
-LabStocker
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LabStocker</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+			html, body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				padding: 0; margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			body {
+				background: linear-gradient(#23868c 0%, #5abb97 80%);
+			}
+			body:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				background: radial-gradient(transparent 0%, rgba(48, 53, 64, 0.25) 300px);
+			}
+			body > h1 {
+				text-indent: -999999px;
+				width: 150px;
+				height: 150px;
+				background-image: url(assets/img/LabStockerRaw.png);
+				background-size: 100%;
+				margin: 0; padding: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -75px;
+				margin-left: -75px;
+				z-index: 2;
+			}
+			body > footer {
+				font-weight: 200;
+				font-size: 10px;
+				width: 100px;
+				height: 15px;
+				display: block;
+				padding: 2px 10px 2px 0;
+				text-align: right;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: 100;
+				background: rgba(48, 53, 64, 0.5);
+				border-radius: 10px 0 0 0;
+				color: #bad9cd;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>LabStocker</h1>
+
+		<footer>&copy; LabStocker, 2014</footer>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-56570296-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
