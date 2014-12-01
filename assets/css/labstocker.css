@@ -1,0 +1,78 @@
+body, html {
+	font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	background: #313540;
+}
+body > header .container-fluid {
+	background: #23868C;
+	color: #e5fff6;
+}
+.nav a:link, .nav a:hover, .nav a:visited, .nav a, .navbar-inverse .navbar-nav>li>a {
+	color: #e5fff6;
+}
+.navbar-brand {
+	background-image: url(../img/labstockertop.png);
+	width: 180px;
+	height: 43px;
+	text-indent: -9999999px;
+	margin-left: 0px !important;
+	margin-top: 2px;
+}
+.sidebar {
+	background-color: rgba(186, 217, 205, 0.5);
+	top: 50px;
+	border: 0;
+	padding: 0 20px;
+}
+li.active > a:link, li.active > a:hover, li.active > a:visited, li.active > a {
+	text-align: right;
+	background-color: #5abb97 !important;
+	height: 40px;
+	position: relative;
+}
+/*li.active > a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 40px;
+	background-image: url(../img/arrow.png);
+	left: 210px;
+}*/
+li.active > ul.nav li a {
+	-webkit-transition: background .2s linear;
+}
+li.active > ul.nav li a:hover {
+	background-color: rgba(48, 53, 64, 0.5);
+}
+li.minha-conta > a {
+	padding-right: 50px;
+}
+li.minha-conta > a:after {
+	content: url(../img/minhaconta.png);
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 10px;
+}
+li.reagentes > a {
+	padding-right: 50px;
+}
+li.reagentes > a:after {
+	content: url(../img/reagentes.png);
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 10px;
+}
+li.usuario > a {
+	padding-right: 50px;
+}
+li.usuario > a:after {
+	content: url(../img/usuarios.png);
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 10px;
+}
+
