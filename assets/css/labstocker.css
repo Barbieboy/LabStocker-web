@@ -2,6 +2,7 @@ body, html {
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	background: #313540;
+	color: #f0f0f0;
 }
 body > header .container-fluid {
 	background: #23868C;
@@ -76,5 +77,9 @@ li.usuario > a:after {
 	position: absolute;
 	top: 6px;
 	right: 10px;
+}
+
+h1 {
+	color: #f0f0f0;
 }
 

@@ -32,13 +32,13 @@
     <div class="container">
 
       <img id="logo" src="assets/img/labstockerlogin.png"/>
-      <form class="form-signin" role="form" action="template.html">
+      <form class="form-signin" role="form" action="login.php" method="post">
         
         <label for="inputEmail" class="sr-only">Usuário</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="usuário" required autofocus>
+        <input type="text" id="inputEmail" class="form-control" placeholder="usuário" required autofocus name="login">
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="*****" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">entrar &raquo;</button>
+        <input type="password" id="inputPassword" class="form-control" placeholder="*****" required name="password">
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="entrar &raquo;"></button>
       </form>
 
     </div> <!-- /container -->
