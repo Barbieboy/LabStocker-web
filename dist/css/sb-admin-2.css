@@ -5,7 +5,10 @@
  */
 
 body {
-    background-color: #f8f8f8;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background: #313540;
+    color: #f0f0f0;
 }
 
 #wrapper {
@@ -15,7 +18,7 @@ body {
 #page-wrapper {
     padding: 0 15px;
     min-height: 568px;
-    background-color: #fff;
+    background-color: #313540;
 }
 
 @media(min-width:768px) {
