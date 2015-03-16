@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LabStocker - Home</title>
+    <title>LabStocker - Cadastrar Reagente</title>
 
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300" rel="stylesheet" type="text/css">
@@ -366,14 +366,16 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Quantidade</label>
-                                            <input class="form-control" class="col-md-5">
-                                            <select class="form-control" class="col-md-1">
-                                                <option>mg</option>
-                                                <option>g</option>
-                                                <option>kg</option>
-                                                <option>mL</option>
-                                                <option>L</option>
-                                            </select>             
+                                            <div class="row">
+                                                <div class="col-md-8"><input class="form-control"></div>
+                                                <div class="col-md-4"><select class="form-control">
+                                                    <option>mg</option>
+                                                    <option>g</option>
+                                                    <option>kg</option>
+                                                    <option>mL</option>
+                                                    <option>L</option>
+                                                </select> </div>
+                                            </div>
                                         </div> 
                                         
                                     </form>
