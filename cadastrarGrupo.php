@@ -345,6 +345,8 @@
                                                     <option>Roberto Lima</option>
                                                     <option>Pio</option>                                                   
                                                 </select>
+                                        <button type="limpar" class="btn btn-outline btn-warning">Limpar</button>
+                                        <button type="cadastrar" class="btn btn-outline btn-success">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>
