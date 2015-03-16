@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LabStocker - Cadastrar Grupo</title>
+    <title>LabStocker - Pesquisar Reagente</title>
 
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300" rel="stylesheet" type="text/css">
@@ -48,10 +48,11 @@
         <?php require("header.php"); ?>
 
         <?php require("sidebar.php"); ?>
+
         <div id="page-wrapper">
            <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Cadastrar Grupo</h1>
+                    <h1 class="page-header">Pesquisar Reagente</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -60,25 +61,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Nome</label>
-                                            <input class="form-control">
-                                            <p class="help-block">Exemplo: Química ao Alcance de Todos</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Orientador</label>
-                                                <select class="form-control">
-                                                    <option>Roberto Lima</option>
-                                                    <option>Pio</option>                                                   
-                                                </select>
-                                        <button type="limpar" class="btn btn-outline btn-warning">Limpar</button>
-                                        <button type="cadastrar" class="btn btn-outline btn-success">Cadastrar</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
+                               
                             </div>
                             <!-- /.row (nested) -->
                         </div>
