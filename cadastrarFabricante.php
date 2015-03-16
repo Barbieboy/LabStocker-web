@@ -45,7 +45,7 @@
 <body>
 
     <div id="wrapper">
-         <?php require("header.php"); ?>
+        <?php require("header.php"); ?>
 
         <?php require("sidebar.php"); ?>
 
