@@ -6,8 +6,12 @@
 
 body {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     background: #313540;
+    color: #0f0f0f;
+}
+
+h1,h2,h3 {
     color: #f0f0f0;
 }
 
@@ -16,6 +20,8 @@ body {
 }
 
 #page-wrapper {
+    border: 0 !important;
+    margin-top: 80px;
     padding: 0 15px;
     min-height: 568px;
     background-color: #313540;
@@ -24,27 +30,62 @@ body {
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
+        margin: 30px 0 0 250px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
     }
 }
 
+.navbar-fixed-top {
+    background: #23868c;
+    border: 0;
+}
+
+.navbar-brand {
+    background-image: url(../../assets/img/labstockertop.png);
+    width: 180px;
+    height: 43px;
+    text-indent: -9999999px;
+    margin: 2px 0 0 15px;
+}
+
 .navbar-top-links {
     margin-right: 0;
+    border: 0;
 }
 
 .navbar-top-links li {
     display: inline-block;
+    margin: 0;
 }
 
-.navbar-top-links li:last-child {
-    margin-right: 15px;
-}
-
-.navbar-top-links li a {
+.navbar-fixed-top .navbar-top-links li a {
     padding: 15px;
     min-height: 50px;
+    color: #e5fff6;
+    -webkit-transition: background .2s linear;
+    -moz-transition: background .2s linear;
+    -o-transition: background .2s linear;
+    transition: background .2s linear;
+}
+.navbar-top-links li a:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+.navbar-top-links li a:active {
+    background-color: rgba(0,0,0,0.2);
+}
+.navbar-top-links li.open > a {
+    background-color: rgba(0,0,0,0.2) !important;
+}
+
+.navbar-top-links .dropdown-menu {
+    border-radius: 0;
+    padding: 0;
+    margin: -1px 0 0 0;
+}
+
+.navbar-top-links .dropdown-menu .divider {
+    margin: 0;
 }
 
 .navbar-top-links .dropdown-menu li {
@@ -55,14 +96,33 @@ body {
     margin-right: 0;
 }
 
+.navbar-top-links {
+    font-size: 0;
+}
+.navbar-top-links .dropdown-toggle {
+    font-size: 14px;
+}
+
+@media(min-width:768px) {
+    .navbar-top-links .dropdown-toggle {
+        font-size: 16px;
+    }
+}
+
 .navbar-top-links .dropdown-menu li a {
-    padding: 3px 20px;
+    padding: 10px 15px;
     min-height: 0;
+    color: #0f0f0f;
+}
+
+.navbar-top-links .dropdown-menu li:hover a {
+    background-color: #e5fff6;
 }
 
 .navbar-top-links .dropdown-menu li a div {
     white-space: normal;
 }
+.divider {margin: 0 auto;}
 
 .navbar-top-links .dropdown-messages,
 .navbar-top-links .dropdown-tasks,
@@ -73,6 +133,7 @@ body {
 
 .navbar-top-links .dropdown-messages {
     margin-left: 5px;
+
 }
 
 .navbar-top-links .dropdown-tasks {
@@ -88,9 +149,16 @@ body {
     left: auto;
 }
 
+.sidebar {
+    background-color: rgba(186, 217, 205, 0.5);
+    border: 0 !important;
+}
+
 .sidebar .sidebar-nav.navbar-collapse {
+    border: 0 !important;
     padding-right: 0;
     padding-left: 0;
+    background: transparent;
 }
 
 .sidebar .sidebar-search {
@@ -101,8 +169,11 @@ body {
     border-bottom: 1px solid #e7e7e7;
 }
 
+.sidebar ul li a {
+    color: #f0f0f0;
+}
 .sidebar ul li a.active {
-    background-color: #eee;
+    background-color: transparent;
 }
 
 .sidebar .arrow {
@@ -135,7 +206,8 @@ body {
         z-index: 1;
         position: absolute;
         width: 250px;
-        margin-top: 51px;
+        font-size: 16px;
+        margin-top: 52px;
     }
 
     .navbar-top-links .dropdown-messages,
@@ -144,6 +216,8 @@ body {
         margin-left: auto;
     }
 }
+
+/*************************************************************************/
 
 .btn-outline {
     color: inherit;
