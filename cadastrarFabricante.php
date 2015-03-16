@@ -67,6 +67,8 @@
                                             <label>Nome</label>
                                             <input class="form-control">
                                             <p class="help-block">Exemplo: Fabricante 1</p>
+                                            <button type="limpar" class="btn btn-outline btn-warning">Limpar</button>
+                                            <button type="cadastrar" class="btn btn-outline btn-success">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>
