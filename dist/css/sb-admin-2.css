@@ -149,9 +149,15 @@ h1,h2,h3 {
     left: auto;
 }
 
+
+/**SIDEBAR**/
 .sidebar {
-    background-color: rgba(186, 217, 205, 0.5);
+    background-color: rgba(186, 217, 205, 0.95);
     border: 0 !important;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    font-size: 16px;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
@@ -170,7 +176,7 @@ h1,h2,h3 {
 }
 
 .sidebar ul li a {
-    color: #f0f0f0;
+    color: #0f0f0f;
 }
 .sidebar ul li a.active {
     background-color: transparent;
@@ -178,6 +184,7 @@ h1,h2,h3 {
 
 .sidebar .arrow {
     float: right;
+    margin-top: -5px;
 }
 
 .sidebar .fa.arrow:before {
@@ -203,11 +210,44 @@ h1,h2,h3 {
 
 @media(min-width:768px) {
     .sidebar {
+        background-color: rgba(186, 217, 205, 0.5);
         z-index: 1;
-        position: absolute;
+        height: 100%;
+        position: fixed;
+        top: 0;
         width: 250px;
         font-size: 16px;
-        margin-top: 52px;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow-y: auto;
+    }
+    .sidebar ul li a {
+        color: #f0f0f0;
+        -webkit-transition: background .2s linear;
+        -moz-transition: background .2s linear;
+        -o-transition: background .2s linear;
+        transition: background .2s linear;
+        height: 35px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .sidebar ul li a:hover,.sidebar ul li a.active:hover {
+        background-color: rgba(48, 53, 64, 0.5);
+    }
+    .sidebar .sidebar-nav {
+        margin-top: 50px;
+    }
+    .sidebar #side-menu li {
+        border: none;
+    }
+    .sidebar #side-menu > li > a {
+        height: 40px;
+        line-height: 22px;
+        padding: 10px 20px 35px;
+        background-color: #5abb97;
+    }
+    .sidebar #side-menu > li > a i {
+        font-size: 24px;
     }
 
     .navbar-top-links .dropdown-messages,
