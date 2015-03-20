@@ -39,7 +39,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
+    
 </head>
 
 <body>
@@ -62,13 +65,13 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    <form role="form" action="" method="post" id="form-cadastrar-fabricante">
                                         <div class="form-group">
                                             <label>Nome</label>
-                                            <input class="form-control">
+                                            <input class="form-control" id="nomeFabricante">
                                             <p class="help-block">Exemplo: Fabricante 1</p>
                                             <button type="limpar" class="btn btn-outline btn-warning">Limpar</button>
-                                            <button type="cadastrar" class="btn btn-outline btn-success">Cadastrar</button>
+                                            <button type="submit" class="btn btn-outline btn-success" id="cadastrar-fabricante">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -88,23 +91,44 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="bower_components/raphael/raphael-min.js"></script>
-    <script src="bower_components/morrisjs/morris.min.js"></script>
-    <script src="assets/js/morris-data.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/labstocker-main.js"></script>
 
+
+    <script type="text/javascript">
+        function limparFabricante(){
+            $("#nomeFabricante").val("");
+            $(".alert").detach();
+        }
+
+        $(function(){
+            $("#form-cadastrar-fabricante").submit(function(event) {
+                event.preventDefault();
+               
+                $.post(
+                    'action/inserirFabricante.php', 
+                    {
+                        nome: $("#nomeFabricante").val() 
+                    }, 
+                    function(data) {
+                        limparFabricante();
+                        if(data != "OK") {
+                            $('<div class="alert alert-warning">'+data+'</div>').prependTo('#form-cadastrar-fabricante').hide().show('slow');
+                        } 
+                        else {
+                            $('<div class="alert alert-success">Fabricante cadastrado com sucesso.</div>').prependTo('#form-cadastrar-fabricante').hide().show('slow');
+                        }
+                    }
+                );
+            });
+        });
+    </script>
 </body>
 
 </html>

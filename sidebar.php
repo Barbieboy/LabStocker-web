@@ -34,7 +34,7 @@
                                 <a href="cadastrarUsuario.php">Cadastrar Usuário</a>
                             </li>
                             <li>
-                                <a href="pesquisarUsuario.php">Pesquisar Usuário</a>
+                                <a href="javascript:void(0);">Pesquisar Usuário</a>
                             </li>
                             <li>
                                 <a href="cadastrarGrupo.php">Cadastrar Grupo</a>

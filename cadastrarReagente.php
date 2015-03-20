@@ -40,6 +40,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+        <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -61,44 +64,50 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row">
+                            <form role="form" action="" method="post" id="form-cadastrar-reagente">
                                 <div class="col-lg-6">
-                                    <form role="form">
+                                    
                                         <div class="form-group">
-                                            <label>Nome</label>
-                                            <input class="form-control">
+                                            <label>Nome*</label>
+                                            <input class="form-control" id="nome">
                                             <p class="help-block">Exemplo: Ácido Clorídrico</p>
                                         </div>
                                         <div class="form-group">
-                                            <label>Classificação</label>
-                                            <select class="form-control">
-                                                <option>1- Reagente Inorgânicos</option>
-                                                <option>2- Sais Inorgânicos</option>
-                                                <option>3- Bases e Metais</option>
-                                                <option>4- Ácidos Inorgânicos</option>
-                                                <option>5- Oxidantes</option>
-                                                <option>6- Indicadores</option>
-                                                <option>7- Soluções(Aulas Práticas)</option>
+                                            <label>Classificação*</label>
+                                            <select class="form-control" id="classificacao">
+                                            <?php 
+                                            $query = "SELECT * FROM Reagentes_Classificacao";
+                                            $result = mysqli_query($dbc, $query);
+                                            while($row = mysqli_fetch_array($result)):
+                                            ?>
+                                                <option value="<?php echo $row['idClassificacao']; ?>"><?php echo $row['prateleira'].' - '.utf8_encode($row['nome']); ?></option>
+                                            <?php endwhile; ?>
                                             </select>
+
                                         </div>
                                         <div class="form-group">
                                             <label>Fórmula</label>
-                                            <input class="form-control">
+                                            <input class="form-control" id="formula">
                                             <p class="help-block">Exemplo: HCl</p>
                                         </div>
                                         <div class="form-group">
-                                            <label>Fabricantes</label>
-                                            <select class="form-control">
-                                                <option>VERTEX Química LTDA</option>
-                                                <option>LABSYNTH</option>
-                                                
+                                            <label>Fabricante*</label>
+                                            <select class="form-control" id="fabricante">
+                                            <?php 
+                                            $query = "SELECT * FROM Reagentes_Fabricante";
+                                            $result = mysqli_query($dbc, $query);
+                                            while($row = mysqli_fetch_array($result)):
+                                            ?>
+                                                <option value="<?php echo $row['idFabricante']; ?>"><?php echo utf8_encode($row['nome']); ?></option>
+                                            <?php endwhile; ?>
                                             </select>
                                         </div>
                                         <div class="form-group">
                                             <label>Quantidade</label>
                                             <div class="row">
 
-                                                <div class="col-md-8"><input class="form-control"></div>
-                                                <div class="col-md-4"><select class="form-control">
+                                                <div class="col-md-8"><input class="form-control" id="quantidade"></div>
+                                                <div class="col-md-4"><select class="form-control" id="unidadeQuantidade">
                                                     <option>mg</option>
                                                     <option>g</option>
                                                     <option>kg</option>
@@ -108,18 +117,18 @@
                                             </div>
                                         </div> 
                                         
-                                    </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Código</label>
-                                        <input class="form-control">
+                                        <input class="form-control" id="codigo">
                                     </div>            
                                         
                                     <div class="form-group">
                                         <label>Dados Adicionais</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <textarea class="form-control" rows="3" id="dadosAdicionais"></textarea>
+                                        <p class="help-block">Exemplo: Validade</p>
                                     </div>                           
                                     
                                     <div class="form-group">
@@ -127,10 +136,12 @@
                                         <input type="file">
                                     </div>
                                     <button type="limpar" class="btn btn-outline btn-warning">Limpar</button>
-                                    <button type="cadastrar" class="btn btn-outline btn-success">Cadastrar</button>
+                                    <input type="submit" class="btn btn-outline btn-success" value="Cadastrar">
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
+
                             </div>
+                            </form>
                             <!-- /.row (nested) -->
                         </div>
                         <!-- /.panel-body -->
@@ -145,22 +156,60 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="bower_components/raphael/raphael-min.js"></script>
-    <script src="bower_components/morrisjs/morris.min.js"></script>
-    <script src="assets/js/morris-data.js"></script>
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>>
 
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/labstocker-main.js"></script>
+
+    <script type="text/javascript">
+        function limparReagente(){
+            $("#nomeFabricante").val("");
+            $("#nome").val(),
+            $("#classificacao").val(),
+            $("#formula").val(),
+            $("#fabricante").val(),
+            $("#quantidade").val(),
+            $("#unidadeQuantidade").val(),
+            $("#codigo").val(),
+            $("#dadosAdicionais").val(),
+            $(".alert").detach();
+        }
+
+
+        $(function(){
+            $("#form-cadastrar-reagente").submit(function(event) {
+                event.preventDefault();
+                $.post(
+                    'action/inserirReagente.php', 
+                    {
+                        nome: $("#nome").val(),
+                        classificacao: $("#classificacao").val(),
+                        formula: $("#formula").val(),
+                        fabricante: $("#fabricante").val(),
+                        quantidade: $("#quantidade").val(),
+                        unidadeQuantidade: $("#unidadeQuantidade").val(),
+                        codigo: $("#codigo").val(),
+                        dadosAdicionais: $("#dadosAdicionais").val(),
+                    }, 
+                    function(data) {
+                        limparReagente();
+                        if(data != "OK") {
+                            $('<div class="alert alert-warning">'+data+'</div>').prependTo('#form-cadastrar-reagente > div:first').hide().show('slow');
+                        } 
+                        else {
+                            $('<div class="alert alert-success">Reagente cadastrado com sucesso.</div>').prependTo('#form-cadastrar-reagente > div:first').hide().show('slow');
+                        }
+                    }
+                );
+            });
+        });
+    </script>
 </body>
 
 </html>
